@@ -32,12 +32,40 @@
     </nav>
 
     <main
-      class="bg-[#FFFDF3] px-20 py-10 min-h-screen w-screen flex justify-center"
+      class="bg-[#FFFDF3] px-10 lg:px-20 py-10 min-h-screen w-screen "
     >
         <!--Hero Section-->
-        <div class="h-[400px] overflow-hidden">
-            <img src="hero.jpg" alt="hero section" class=""
+      <div class="relative w-full w-fit mx-auto h-[400px] rounded-2xl overflow-hidden bg-cover bg-bottom mb-10" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero.jpg');">
+        
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white max-w-3xl mx-auto">
+          <h1 class="text-xl lg:text-4xl font-bold mb-4">
+            Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!
+          </h1>
+          <p class="text-xs lg:text-sm mb-6 opacity-90">
+            Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.
+          </p>
+          <button class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition">
+            Temukan Video Course untuk Dipelajari!
+          </button>
         </div>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-xl lg:text-3xl font-bold mb-2">Koleksi Video Pembelajaran Unggulan</h3>
+        <p class="text-xs lg:text-sm text-[#333333]">Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!!</p>
+      </div>
+
+      <!--Category List-->
+      <div>
+        <ul class="flex gap-8 justify-start text-gray-400">
+          <li>Semua Kelas</li>
+          <li>Pemasaran</li>
+          <li>Design</li>
+          <li>Pengembangan Diri</li>
+          <li>Bisnis</li>
+        </ul>
+      </div>
     </main>
     
 </body>
