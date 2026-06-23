@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,54 +19,429 @@
         font-family: "DM Sans", sans-serif;
       }
     </style>
-</head>
-<body>
-
-    <nav class="bg-white px-20 py-2 flex justify-between z-10">
-        
-        <img src="Logo_videobelajar.png" alt="Logo" />
-        <div class="flex justify-between gap-10 items-center">
-            <p class="text-xs lg:text-sm text-[#333333]">Kategori</p>
-            <img src="Avatar.png" alt="profile" width="36"/>
-        </div>
+  </head>
+  <body>
+    <nav class="bg-white px-5 md:px-10 lg:px-20 py-2 flex justify-between z-10">
+      <img src="Logo_videobelajar.png" alt="Logo" class="h-5 md:h-12" />
+      <div class="justify-between gap-10 items-center hidden md:flex">
+        <p class="text-xs lg:text-sm text-[#333333]">Kategori</p>
+        <img src="Avatar.png" alt="profile" width="36" />
+      </div>
+      <button class="md:hidden">
+        <img src="burger_menu_icon.png" alt="menu" width="16" />
+      </button>
     </nav>
 
     <main
-      class="bg-[#FFFDF3] px-10 lg:px-20 py-10 min-h-screen w-screen "
+      class="bg-[#FFFDF3] px-5 md:px-10 lg:px-20 py-10 min-h-screen w-screen"
     >
-        <!--Hero Section-->
-      <div class="relative w-full w-fit mx-auto h-[400px] rounded-2xl overflow-hidden bg-cover bg-bottom mb-10" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero.jpg');">
-        
-        <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white max-w-3xl mx-auto">
+      <!--Hero Section-->
+      <div
+        class="relative w-full w-fit mx-auto h-[400px] rounded-2xl overflow-hidden bg-cover bg-bottom mb-10"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url(&quot;hero.jpg&quot;);
+        "
+      >
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white max-w-3xl mx-auto"
+        >
           <h1 class="text-xl lg:text-4xl font-bold mb-4">
-            Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!
+            Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video
+            Interaktif!
           </h1>
           <p class="text-xs lg:text-sm mb-6 opacity-90">
-            Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.
+            Temukan ilmu baru yang menarik dan mendalam melalui koleksi video
+            pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat
+            berpartisipasi dalam latihan interaktif yang akan meningkatkan
+            pemahaman Anda.
           </p>
-          <button class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition">
+          <button
+            class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition"
+          >
             Temukan Video Course untuk Dipelajari!
           </button>
         </div>
       </div>
 
       <div class="mb-8">
-        <h3 class="text-xl lg:text-3xl font-bold mb-2">Koleksi Video Pembelajaran Unggulan</h3>
-        <p class="text-xs lg:text-sm text-[#333333]">Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!!</p>
+        <h3 class="text-xl lg:text-3xl font-bold mb-2">
+          Koleksi Video Pembelajaran Unggulan
+        </h3>
+        <p class="text-xs lg:text-sm text-[#333333]">
+          Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!!
+        </p>
       </div>
 
-      <!--Category List-->
-      <div>
-        <ul class="flex gap-8 justify-start text-gray-400">
-          <li>Semua Kelas</li>
-          <li>Pemasaran</li>
-          <li>Design</li>
-          <li>Pengembangan Diri</li>
-          <li>Bisnis</li>
+      <!--Category List Tablet and Desktop-->
+      <div class="hidden md:block">
+        <ul class="flex gap-4 justify-start text-gray-500">
+          <li>
+            <label class="cursor-pointer block">
+              <input
+                type="radio"
+                name="kategori_alt2"
+                class="peer hidden"
+                checked
+              />
+              <span
+                class="px-4 py-2 rounded-full border border-gray-200 block peer-checked:bg-[#F64920] peer-checked:text-white peer-checked:border-[#F64920] transition-all duration-200 text-sm font-medium"
+              >
+                Semua Kelas
+              </span>
+            </label>
+          </li>
+
+          <li>
+            <label class="cursor-pointer block">
+              <input type="radio" name="kategori_alt2" class="peer hidden" />
+              <span
+                class="px-4 py-2 rounded-full border border-gray-200 block peer-checked:bg-[#F64920] peer-checked:text-white peer-checked:border-[#F64920] transition-all duration-200 text-sm font-medium"
+              >
+                Pemasaran
+              </span>
+            </label>
+          </li>
+
+          <li>
+            <label class="cursor-pointer block">
+              <input type="radio" name="kategori_alt2" class="peer hidden" />
+              <span
+                class="px-4 py-2 rounded-full border border-gray-200 block peer-checked:bg-[#F64920] peer-checked:text-white peer-checked:border-[#F64920] transition-all duration-200 text-sm font-medium"
+              >
+                Design
+              </span>
+            </label>
+          </li>
+
+          <li>
+            <label class="cursor-pointer block">
+              <input type="radio" name="kategori_alt2" class="peer hidden" />
+              <span
+                class="px-4 py-2 rounded-full border border-gray-200 block peer-checked:bg-[#F64920] peer-checked:text-white peer-checked:border-[#F64920] transition-all duration-200 text-sm font-medium"
+              >
+                Pengembangan Diri
+              </span>
+            </label>
+          </li>
+
+          <li>
+            <label class="cursor-pointer block">
+              <input type="radio" name="kategori_alt2" class="peer hidden" />
+              <span
+                class="px-4 py-2 rounded-full border border-gray-200 block peer-checked:bg-[#F64920] peer-checked:text-white peer-checked:border-[#F64920] transition-all duration-200 text-sm font-medium"
+              >
+                Bisnis
+              </span>
+            </label>
+          </li>
         </ul>
       </div>
+
+      <!--Category List Mobile-->
+      <div class="md:hidden">
+        <select
+          class="bg-white border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option>Semua Kelas</option>
+          <option>Pemasaran</option>
+          <option>Design</option>
+          <option>Pengembangan Diri</option>
+          <option>Bisnis</option>
+        </select>
+      </div>
+
+      <!--Video Course List-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden p-5">
+          <img
+            src="course_picture.png"
+            alt="course 1"
+            class="w-full h-48 object-cover rounded-lg"
+          />
+          <div class="mt-4">
+            <h4 class="text-lg font-bold mb-2 font-poppins">
+              Programming Course
+            </h4>
+            <p class="text-sm text-gray-500 font-dm">
+              Pelajari dasar-dasar pemrograman dan tingkatkan keterampilan
+              coding Anda dengan kursus ini.
+            </p>
+            <div class="flex items-center mt-4 gap-3">
+              <img src="instructor_picture.png" alt="insturctor" width="36" />
+              <div class="font-dm">
+                <p class="text-sm font-dm font-bold">John Doe</p>
+                <p class="text-xs text-gray-500 font-dm">
+                  Lead Developer at GOTO
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <p class="text-sm font-dm">★★★★☆ <u>4(90)</u></p>
+              <p class="text-md font-poppins font-bold text-green-500">
+                Rp 150.000
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    
-</body>
+  </body>
 </html>
